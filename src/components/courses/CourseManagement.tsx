@@ -46,7 +46,7 @@ export function CourseManagement({ userRole }: CourseManagementProps) {
               id: 'content2',
               type: 'video',
               title: 'Démonstration',
-              content: 'https://example.com/video.mp4'
+              content: 'https://www.youtube.com/watch?v=j8AVXNozac8&list=PLNqp92_EXZBKa1U7JbgUwBnDk3XzYDvXe'
             }
           ]
         }

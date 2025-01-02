@@ -8,11 +8,19 @@ import { QuizManagement } from './components/quiz/QuizManagement';
 import { StudentGrades } from './components/student/Grades';
 import { Forums } from './components/forums/Forums';
 import { Navigation } from './components/Navigation';
-import { PaymentManagement } from './components/accounting/PaymentManagement';
 import { Chat } from './components/chat/Chat';
 import AcademicStructure from './components/academic/AcademicStructure';
 import TeacherAssignment from './components/academic/TeacherAssignment';
 import { TimeTableManagement } from './components/planning/TimeTableManagement';
+import { StudentProgress } from './components/student/StudentProgress';
+import { SystemSettings } from './components/admin/SystemSettings';
+import { Reports } from './components/admin/Reports';
+import { AcademicPlanning } from './components/academic/AcademicPlanning';
+import { StudentPayments } from './components/accounting/StudentPayments';
+import { SalaryPayments } from './components/accounting/SalaryPayments';
+import { FinancialReports } from './components/accounting/FinancialReports';
+import { StudentAssignments } from './components/student/StudentAssignments';
+import { StudentCourses } from './components/student/StudentCourses';
 
 // Types
 interface User {
@@ -57,7 +65,11 @@ export default function App() {
               
               {/* Routes Admin */}
               {hasPermission('admin') && (
-                <Route path="/users" element={<UserManagement />} />
+                <>
+                  <Route path="/users" element={<UserManagement />} />
+                  <Route path="/settings" element={<SystemSettings />} />
+                  <Route path="/reports" element={<Reports />} />
+                </>
               )}
 
               {/* Routes Responsable Scolarité */}
@@ -65,12 +77,17 @@ export default function App() {
                 <>
                   <Route path="/academic/structure" element={<AcademicStructure />} />
                   <Route path="/academic/teachers" element={<TeacherAssignment />} />
+                  <Route path="/academic/planning" element={<AcademicPlanning />} />
                 </>
               )}
 
               {/* Routes Comptabilité */}
               {hasPermission('accounting') && (
-                <Route path="/payments/*" element={<PaymentManagement />} />
+                <>
+                  <Route path="/payments/students" element={<StudentPayments />} />
+                  <Route path="/payments/salaries" element={<SalaryPayments />} />
+                  <Route path="/payments/reports" element={<FinancialReports />} />
+                </>
               )}
 
               {/* Routes Enseignant */}
@@ -78,6 +95,7 @@ export default function App() {
                 <>
                   <Route path="/courses/*" element={<CourseManagement userRole={user.role} />} />
                   <Route path="/quizzes/*" element={<QuizManagement userRole={user.role} />} />
+                  <Route path="/student-progress" element={<StudentProgress />} />
                 </>
               )}
 
@@ -91,7 +109,11 @@ export default function App() {
 
               {/* Routes Étudiant */}
               {hasPermission(['student']) && (
-                <Route path="/grades" element={<StudentGrades studentId={user.id} />} />
+                <>
+                  <Route path="/grades" element={<StudentGrades studentId={user.id} />} />
+                  <Route path="/assignments" element={<StudentAssignments />} />
+                  <Route path="/courses" element={<StudentCourses />} />
+                </>
               )}
 
               <Route path="/planning" element={<TimeTableManagement userRole="admin" />} />

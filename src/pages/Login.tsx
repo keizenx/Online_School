@@ -30,7 +30,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
       <div className="mb-8 flex items-center space-x-3">
         <GraduationCap className="w-12 h-12 text-blue-600" />
-        <h1 className="text-3xl font-bold text-gray-900">École en ligne</h1>
+        <h1 className="text-3xl font-bold text-gray-900">Online School</h1>
       </div>
 
       <div className="bg-white rounded-lg shadow-md w-full max-w-md p-8">

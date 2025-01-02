@@ -19,7 +19,7 @@ export function SecurityPlanning() {
       date: '2024-03-15',
       startTime: '08:00',
       endTime: '16:00',
-      guard: 'Jean Martin',
+      guard: 'Jean Kouassi',
       location: 'Entrée principale',
       status: 'planned'
     },
@@ -28,7 +28,7 @@ export function SecurityPlanning() {
       date: '2024-03-15',
       startTime: '16:00',
       endTime: '00:00',
-      guard: 'Marie Dubois',
+      guard: 'Marie Akissi',
       location: 'Entrée principale',
       status: 'planned'
     }

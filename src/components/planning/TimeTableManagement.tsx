@@ -31,7 +31,7 @@ export function TimeTableManagement({ userRole }: TimeTableProps) {
       startTime: '08:00',
       endTime: '10:00',
       subject: 'Mathématiques',
-      teacher: 'Marie Martin',
+      teacher: 'Marie Akissi',
       classroom: 'Salle 101',
       class: 'Terminal S2'
     },
@@ -41,7 +41,7 @@ export function TimeTableManagement({ userRole }: TimeTableProps) {
       startTime: '10:00',
       endTime: '12:00',
       subject: 'Physique',
-      teacher: 'Jean Dupont',
+      teacher: 'Jean Kouassi',
       classroom: 'Salle 102',
       class: 'Terminal S2'
     }
