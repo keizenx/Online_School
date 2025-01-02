@@ -99,6 +99,21 @@ src/
 ![Academic Structure](docs/images/Gestion-Utilisateurs.PNG) 
 ![Planning](docs/images/Quizz.PNG) 
  
+## 📊 Diagrammes du Projet
+
+### Diagramme de Cas d'Utilisation
+![Diagramme de Cas d'Utilisation](docs/images/Diagramme%20de%20Cas%20d'utilisation%20Online%20School.PNG)
+
+### Diagramme de Classe
+![Diagramme de Classe](docs/images/Diagramme%20de%20Classe%20Online%20School.PNG)
+
+### Diagramme d'Activité
+![Diagramme d'Activité](docs/images/Diagramme%20d'activite%20Online%20School.PNG)
+
+### Diagramme de Séquence
+![Diagramme de Séquence](docs/images/Diagramme%20de%20Sequence%20Online%20School.PNG)
+
+
 ## 🤝 Contribution 
  
 Les contributions sont les bienvenues ! N'hésitez pas à : 
