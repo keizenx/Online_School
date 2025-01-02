@@ -48,7 +48,7 @@ git clone https://github.com/Loytifi/Online-School.git
  
 2. Installer les dépendances 
 ```bash 
-cd gestion-scolaire 
+cd .\Online-School\ 
 npm install 
 ``` 
  
