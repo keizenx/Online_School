@@ -44,7 +44,7 @@ Une application web moderne et intuitive pour la gestion complète d'établissem
 
 1. Cloner le repository
 ```bash
-git clone https://github.com/votre-username/gestion-scolaire.git
+git clone https://github.com/Loytifi/Online-School.git
 ```
 
 2. Installer les dépendances
@@ -117,4 +117,4 @@ Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
 
 Votre Nom - [@votretwitter](https://twitter.com/votretwitter) - email@example.com
 
-Lien du projet: [https://github.com/votre-username/gestion-scolaire](https://github.com/votre-username/gestion-scolaire)
+Lien du projet: [https://github.com/Loytifi/Online-School](https://github.com/Loytifi/Online-School)
