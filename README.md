@@ -96,9 +96,9 @@ src/
 
 ## 📱 Captures d'écran
 
-![Dashboard](docs/images/dashboard.png)
-![Academic Structure](docs/images/academic-structure.png)
-![Planning](docs/images/planning.png)
+![Dashboard](docs/images/Dashboard.png)
+![Gestion-Utilisateurs](docs/images/Gestion-Utilisateurs.png)
+![Quizz](docs/images/Quizz.png)
 
 ## 🤝 Contribution
 
@@ -115,6 +115,6 @@ Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
 
 ## 📞 Contact
 
-Votre Nom - [@votretwitter](https://twitter.com/votretwitter) - email@example.com
+Votre Nom - [@X](https://X.com/keizensberg) - franckbello0@gmail.com
 
 Lien du projet: [https://github.com/Loytifi/Online-School](https://github.com/Loytifi/Online-School)
