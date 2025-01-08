@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import Login from './pages/Login';
-import { Dashboard } from './components/Dashboard';
 import { UserManagement } from './components/admin/UserManagement';
 import { CourseManagement } from './components/courses/CourseManagement';
 import { QuizManagement } from './components/quiz/QuizManagement';
@@ -21,6 +20,13 @@ import { SalaryPayments } from './components/accounting/SalaryPayments';
 import { FinancialReports } from './components/accounting/FinancialReports';
 import { StudentAssignments } from './components/student/StudentAssignments';
 import { StudentCourses } from './components/student/StudentCourses';
+import { StudentManagement } from './components/academic/StudentManagement';
+import { AcademicDashboard } from './components/academic/AcademicDashboard';
+import { AdminDashboard } from './components/admin/AdminDashboard';
+import { TeacherDashboard } from './components/teacher/TeacherDashboard';
+import { StudentDashboard } from './components/student/StudentDashboard';
+import { AccountingDashboard } from './components/accounting/AccountingDashboard';
+import { PaymentsDashboard } from './components/accounting/PaymentsDashboard';
 
 // Types
 interface User {
@@ -50,6 +56,24 @@ export default function App() {
     return user.role === requiredRole;
   };
 
+  // Fonction pour obtenir la route du dashboard selon le rôle
+  const getDashboardRoute = (role: string) => {
+    switch (role) {
+      case 'academic':
+        return '/academic';
+      case 'admin':
+        return '/admin';
+      case 'teacher':
+        return '/teacher';
+      case 'student':
+        return '/student';
+      case 'accounting':
+        return '/accounting';
+      default:
+        return '/dashboard';
+    }
+  };
+
   return (
     <BrowserRouter>
       {user ? (
@@ -61,7 +85,9 @@ export default function App() {
           />
           <main className="container mx-auto px-4 py-8">
             <Routes>
-              <Route path="/dashboard" element={<Dashboard userRole={user.role} />} />
+              {/* Redirection par défaut vers le dashboard approprié */}
+              <Route path="/" element={<Navigate to={getDashboardRoute(user.role)} replace />} />
+              <Route path="/dashboard" element={<Navigate to={getDashboardRoute(user.role)} replace />} />
               
               {/* Routes Admin */}
               {hasPermission('admin') && (
@@ -75,15 +101,18 @@ export default function App() {
               {/* Routes Responsable Scolarité */}
               {hasPermission('academic') && (
                 <>
+                  <Route path="/academic" element={<AcademicDashboard />} />
                   <Route path="/academic/structure" element={<AcademicStructure />} />
                   <Route path="/academic/teachers" element={<TeacherAssignment />} />
                   <Route path="/academic/planning" element={<AcademicPlanning />} />
+                  <Route path="/academic/students" element={<StudentManagement />} />
                 </>
               )}
 
               {/* Routes Comptabilité */}
               {hasPermission('accounting') && (
                 <>
+                  <Route path="/payments" element={<PaymentsDashboard />} />
                   <Route path="/payments/students" element={<StudentPayments />} />
                   <Route path="/payments/salaries" element={<SalaryPayments />} />
                   <Route path="/payments/reports" element={<FinancialReports />} />
@@ -118,7 +147,14 @@ export default function App() {
 
               <Route path="/planning" element={<TimeTableManagement userRole="admin" />} />
 
-              <Route path="*" element={<Navigate to="/dashboard" replace />} />
+              {/* Routes des dashboards */}
+              <Route path="/admin" element={hasPermission('admin') ? <AdminDashboard /> : <Navigate to="/" />} />
+              <Route path="/teacher" element={hasPermission('teacher') ? <TeacherDashboard /> : <Navigate to="/" />} />
+              <Route path="/student" element={hasPermission('student') ? <StudentDashboard /> : <Navigate to="/" />} />
+              <Route path="/accounting" element={hasPermission('accounting') ? <AccountingDashboard /> : <Navigate to="/" />} />
+
+              {/* Pour la route catch-all (*), rediriger vers le dashboard approprié */}
+              <Route path="*" element={<Navigate to={getDashboardRoute(user.role)} replace />} />
             </Routes>
           </main>
         </div>
