@@ -131,5 +131,5 @@ Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
  
 (https://X.com/keizensberg) - franckbello0@gmail.com 
  
-Lien du projet: [https://github.com/Loytifi/Online-School](https://github.com/Loytifi/Online-School) 
+Lien du projet: [https://github.com/keizenx/Online-School](https://github.com/keizenx/Online-School) 
  
