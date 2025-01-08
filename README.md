@@ -43,7 +43,7 @@ Une application web moderne et intuitive pour la gestion complète d'établissem
  
 1. Cloner le repository 
 ```bash 
-git clone https://github.com/Loytifi/Online-School.git 
+git clone https://github.com/keizenx/Online-School.git 
 ``` 
  
 2. Installer les dépendances 
