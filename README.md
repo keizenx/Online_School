@@ -48,13 +48,19 @@ git clone https://github.com/keizenx/Online-School.git
  
 2. Installer les dépendances 
 ```bash 
-cd .\Online-School\ 
-npm install 
+cd Online-School 
+pnpm install 
+
+# Dépendances principales 
+pnpm add react@18.2.0 react-dom@18.2.0 react-router-dom@6.21.1 @heroicons/react@2.2.0 
+
+# Dépendances de développement 
+pnpm add -D @types/react@18.2.43 @types/react-dom@18.2.17 @vitejs/plugin-react@4.2.1 typescript@5.2.2 vite@5.0.8 autoprefixer@10.4.16 postcss@8.4.32 tailwindcss@3.4.0 
 ``` 
  
 3. Lancer l'application 
 ```bash 
-npm run dev 
+pnpm run dev 
 ``` 
  
 ## 📁 Structure du Projet 
