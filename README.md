@@ -43,7 +43,7 @@ Une application web moderne et intuitive pour la gestion complète d'établissem
  
 1. Cloner le repository 
 ```bash 
-git clone https://github.com/keizenx/Online-School.git 
+git clone https://github.com/keizenx/Online_School.git 
 ``` 
  
 2. Installer les dépendances 
@@ -73,7 +73,6 @@ src/
 │   ├── courses/        # Composants de gestion des cours 
 │   └── planning/       # Composants de planning 
 ├── pages/              # Pages principales 
-├── utils/              # Utilitaires et helpers 
 └── config/             # Fichiers de configuration 
 ``` 
  
@@ -137,5 +136,5 @@ Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
  
 (https://X.com/keizensberg) - franckbello0@gmail.com 
  
-Lien du projet: [https://github.com/keizenx/Online-School](https://github.com/keizenx/Online-School) 
+Lien du projet: [https://github.com/keizenx/Online_School](https://github.com/keizenx/Online_School) 
  
